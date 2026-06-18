@@ -1,9 +1,7 @@
 from Person import Person
 from PersonComparator import PersonComparator
 
-print("±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±")
 print("Welcome to Comparing Objects Using Generics")
-print("±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±")
 
 # Step 6: Sort by data using Comparable
 persons = [
