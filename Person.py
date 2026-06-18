@@ -31,37 +31,42 @@ class Person:
     def __eq__(self, other):
         if not isinstance(other, Person):
             return NotImplemented
+        if not isinstance(self.data, type(other.data)):
+            raise TypeError(f"Cannot compare {type(self.data)} with {type(other.data)}")
         return self.data == other.data
     
     def __lt__(self, other):
         if not isinstance(other, Person):
             return NotImplemented
+        if not isinstance(self.data, type(other.data)):
+            raise TypeError(f"Cannot compare {type(self.data)} with {type(other.data)}")
         return self.data < other.data
     
     def __le__(self, other):
         if not isinstance(other, Person):
             return NotImplemented
+        if not isinstance(self.data, type(other.data)):
+            raise TypeError(f"Cannot compare {type(self.data)} with {type(other.data)}")
         return self.data <= other.data
     
     def __gt__(self, other):
         if not isinstance(other, Person):
             return NotImplemented
+        if not isinstance(self.data, type(other.data)):
+            raise TypeError(f"Cannot compare {type(self.data)} with {type(other.data)}")
         return self.data > other.data
     
     def __ge__(self, other):
         if not isinstance(other, Person):
             return NotImplemented
+        if not isinstance(self.data, type(other.data)):
+            raise TypeError(f"Cannot compare {type(self.data)} with {type(other.data)}")
         return self.data >= other.data
     
     def __ne__(self, other):
         if not isinstance(other, Person):
             return NotImplemented
+        if not isinstance(self.data, type(other.data)):
+            raise TypeError(f"Cannot compare {type(self.data)} with {type(other.data)}")
         return self.data != other.data
     
-    # Data
-    # Persons Objects
-    Persons = [
-        ("Alice", 30),
-        ("Bob", 25),
-        ("Charlie", 35)
-    ]
