@@ -54,4 +54,4 @@ p2 = Person("Bob", 25, 42)
 try:
     print(p1 == p2)
 except TypeError as e:
-    print(f"Exception caught: {e}")
+    print(f"\nException caught: {e}\n")
