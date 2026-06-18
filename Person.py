@@ -1,13 +1,8 @@
-from functools import total_ordering
-@total_ordering
-
-
-
 class Person:
-    def __init__(self, name, age, data_type):
+    def __init__(self, name, age, data):
         self.name = name
         self.age = age
-        self.data_type = data_type
+        self.data = data
     
     def get_name(self):
         return self.name
@@ -15,8 +10,8 @@ class Person:
     def get_age(self):
         return self.age
     
-    def get_data_type(self):
-        return self.data_type
+    def get_data(self):
+        return self.data
     
     def set_name(self, name):
         self.name = name
@@ -24,14 +19,49 @@ class Person:
     def set_age(self, age):
         self.age = age
 
-    def set_data_type(self, data_type):
-        self.data_type = data_type
+    def set_data(self, data):
+        self.data = data
 
     """" Implementing compareTo method but in Python:
     therefor we will use rich comparison methods:
     __eq__ for equality
     __lt__ for less than """
 
-    # Comparison
+    # Comparison of the objects
     def __eq__(self, other):
-
+        if not isinstance(other, Person):
+            return NotImplemented
+        return self.data == other.data
+    
+    def __lt__(self, other):
+        if not isinstance(other, Person):
+            return NotImplemented
+        return self.data < other.data
+    
+    def __le__(self, other):
+        if not isinstance(other, Person):
+            return NotImplemented
+        return self.data <= other.data
+    
+    def __gt__(self, other):
+        if not isinstance(other, Person):
+            return NotImplemented
+        return self.data > other.data
+    
+    def __ge__(self, other):
+        if not isinstance(other, Person):
+            return NotImplemented
+        return self.data >= other.data
+    
+    def __ne__(self, other):
+        if not isinstance(other, Person):
+            return NotImplemented
+        return self.data != other.data
+    
+    # Data
+    # Persons Objects
+    Persons = [
+        ("Alice", 30),
+        ("Bob", 25),
+        ("Charlie", 35)
+    ]
