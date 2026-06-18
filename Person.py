@@ -27,7 +27,7 @@ class Person:
     __eq__ for equality
     __lt__ for less than """
 
-    # Comparison of the objects
+    # Comparisons
     def __eq__(self, other):
         if not isinstance(other, Person):
             return NotImplemented

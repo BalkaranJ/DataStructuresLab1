@@ -46,3 +46,12 @@ print("\n// Test cases to sort by the Age when names are the same")
 print("Step 12: Sorted by Age (when names are the same):")
 for p in sorted(persons_age, key=PersonComparator.by_age_when_same_name):
     print(f"{p.get_name()} ► {p.get_data()} ► {p.get_age()}")
+
+# Testing exception handling
+p1 = Person("Alice", 30, "StringData")
+p2 = Person("Bob", 25, 42)
+
+try:
+    print(p1 == p2)
+except TypeError as e:
+    print(f"Exception caught: {e}")
